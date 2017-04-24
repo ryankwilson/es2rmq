@@ -1,0 +1,11 @@
+
+version: '2'
+
+services:
+  es2rmq:
+    image: es2rmq:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:5000

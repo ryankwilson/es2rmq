@@ -1,4 +1,3 @@
-
 FROM microsoft/aspnetcore
 LABEL Name=es2rmq Version=0.0.1 
 WORKDIR /app

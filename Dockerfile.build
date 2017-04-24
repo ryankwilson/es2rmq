@@ -1,0 +1,12 @@
+FROM microsoft/aspnetcore-build
+WORKDIR /build
+
+COPY . .
+RUN dotnet restore
+RUN dotnet publish -o /out/
+
+##create container from build-image
+#docker create --name build-container build-image
+
+#copy files from container to be used by deployable image
+#docker cp build-container:/out ./output-on-host

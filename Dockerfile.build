@@ -5,7 +5,7 @@ COPY . .
 RUN dotnet restore
 RUN dotnet publish -o /out/
 
-EXPORT 5000
+EXPOSE 5000
 
 ##create container from build-image
 #docker create --name build-container build-image
